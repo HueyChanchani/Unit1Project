@@ -26,9 +26,9 @@ void setup()
 minim = new Minim(this);
   
   song = minim.loadFile("A Tribe Called Quest - PITATPOR.mp3");
-  song.play();
+  
+ 
 }
-
 void draw()
 {
   int x = int(random(img.width));
@@ -44,5 +44,8 @@ void draw()
   fill(r,g,b,225);
   ellipse(x,y,pointillize,pointillize);
   
-
+if (mousePressed == true)
+{
+  song.play();
+}
 }
